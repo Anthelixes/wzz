@@ -1,0 +1,763 @@
+/*
+  terrible.css
+  Andrew Tunecliffe, 2015
+  http://atunnecliffe.com
+*/
+/* uncomment to see outlines of stuff when you hover *-/
+:hover {
+  background:rgba(0, 0, 0, 0.1);
+}/**/
+
+::-webkit-scrollbar { width: 10px; background: #5F5F5F; } 
+::-webkit-scrollbar-thumb { background: #F3EFEF;  } 
+::-webkit-scrollbar-corner { background: rgba(255,255,255,0.1);}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*FONT*/
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("http://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff") format("woff");
+}
+@font-face {
+  font-family: "MaterialDesignIcons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=1.0.62") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=1.0.62") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=1.0.62") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=1.0.62") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=1.0.62#materialdesigniconsregular") format("svg");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Thin"), local("Roboto-Thin"), url("http://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+}
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto|Oswald|Source+Sans+Pro|Open+Sans+Condensed:300|Montserrat|Droid+Sans|Raleway|Roboto+Slab|Arimo|Noto+Sans|Indie+Flower|Titillium+Web|Bitter|PT+Serif|Yanone+Kaffeesatz|Oxygen|Playfair+Display|Dosis|Poiret+One|Lobster|Arvo|Cabin|Inconsolata|Bree+Serif|Nunito|Josefin+Sans|Signika|Francois+One|Archivo+Narrow|Shadows+Into+Light|Play|Pacifico|Cuprum|Asap|Rokkitt|Maven+Pro|Merriweather+Sans|Quicksand|Karla|PT+Sans+Caption|Fira+Sans|Varela+Round|Questrial|Dancing+Script|Monda|Istok+Web|Abril+Fatface|Patua+One|Gudea|Crete+Round|Covered+By+Your+Grace|Source+Code+Pro|Pontano+Sans|Josefin+Slab|Architects+Daughter|Chewy|Gloria+Hallelujah|Righteous|Kaushan+Script|Quattrocento+Sans|Sanchez|Lobster+Two|Cabin+Condensed|Ruda|Hammersmith+One|Playball|Fredoka+One|Courgette|Sintony|Alfa+Slab+One|Comfortaa|Pinyon+Script|Nobile|Satisfy|Cardo|Bevan|Antic+Slab|Archivo+Black|Kreon|Cantarell|Signika+Negative|ABeeZee|Shadows+Into+Light+Two|Handlee|Didact+Gothic|Russo+One|Paytone+One|Special+Elite|Source+Serif+Pro|Jura|Amaranth|Alegreya+Sans|Scada|Molengo|Domine|Marck+Script|Cookie|Great+Vibes|Patrick+Hand|Actor|Enriqueta|Sorts+Mill+Goudy|Just+Another+Hand|Viga|Damion|Chivo|Trocchi|Basic|Calligraffitti|Days+One|Rambla|Niconne|Lusitana|Volkhov|Copse|Allerta|Bubblegum+Sans|Homemade+Apple|Cherry+Cream+Soda|Electrolize|Berkshire+Swash|Marmelad|Oleo+Script|Gochi+Hand|Cutive|Acme|Montserrat+Alternates|Sacramento|Rancho|Coustard|Alex+Brush|Rochester|Arbutus+Slab|Aclonica|Unkempt|Port+Lligat+Slab|Allura|Inder|Belleza|Spinnaker|Montserrat|Bree+Serif);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Muli:400);
+
+.body {
+    font-family: 'Muli', sans-serif;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 14px;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+.section .container {
+  padding: 30px 0 50px 0;
+}
+
+.section.bg {
+  background: #f7f7f7;
+}
+
+.obiecteslider {
+      background: url(http://i58.tinypic.com/nessd4.png);
+  position: absolute;
+  width: 586px;
+  height: 799px;
+  top: -30px;
+}
+
+.motto {
+  background-image: url(http://i59.tinypic.com/2rptb7p.jpg);
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+/*
+  Header
+*/
+
+.hold {
+  height: 80px;
+}
+
+.header {
+  line-height: 80px;
+  width: 100%;
+  transition: line-height 0.2s linear, box-shadow 0.2s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.header.small {
+  line-height: 50px;
+  box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+}
+
+.header.small > .container > #logo {
+  height: 40px;
+}
+
+#logo {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  background: url(http://data.nimages.fr/logo6xi.png);
+    background-repeat: no-repeat;
+  float: left;
+  height: 83px;
+  width: 100px;
+  margin-left: 5px;
+}
+
+
+a {
+    text-decoration: none;}
+
+ul.nav {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.nav li {
+  float: left;
+  position: relative;
+}
+
+ul.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
+}
+
+ul.nav li:hover a {
+  color: purple;
+}
+
+ul.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+/*
+  Slider
+*/
+
+.section .slider {
+  background: #FFF;
+}
+
+.section .footer {
+    background: #333;
+}
+
+.slidercontent {
+  text-align: center;
+}
+
+.hero {
+  font-family: 'Roboto Slab', sans-serif;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+h1.hero {
+  font-size: 54px;
+}
+
+h2.hero {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+h1.hero:after {
+  content: "";
+  width: 300px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.call {
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.call span {
+  display: inline;
+  border: 1px solid white;
+  padding: 8px 13px;
+  font-size: 20px;
+  transition: background 0.15s linear;
+}
+
+.call span:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+/* 
+  Columns 
+*/
+
+.col {
+  float: left;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.col.four {
+  width: 23%;
+  margin: 0 1%;
+}
+
+.col.three {
+  width: 31.3%;
+  margin: 0 1%;
+}
+
+.col.two {
+  width: 40%;
+  margin: 0 2.5%;
+  padding: 0 2.5%;
+}
+
+.col.extrapad {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.col .service,
+.col .feature {
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.col .service:after {
+  content: "";
+  width: 50px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  display: block;
+  text-align: justify;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.service {
+    text-align: justify;
+}
+
+.col .feature {
+  font-size: 19px;
+}
+
+.col h1.side,
+.col p.side,
+.col span.side:first-of-type {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.col .icon {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  color: #080808;
+  line-height: 95px;
+  text-align: center;
+  margin: 0 auto;
+  transition: background 0.25s linear, color 0.25s linear;
+}
+
+.col .icon.side {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -15px;
+  height: 50px;
+  width: 50px;
+}
+
+.col:hover > .icon {
+  background: #000;
+  color: white;
+}
+
+.col:hover > .icon.side {
+  background: initial;
+  color: initial;
+}
+
+.responsivegroup {
+  display: none;
+}
+/*
+  Column specifics
+*/
+
+.col p,
+.col h1 {
+  padding: 0 1%;
+  text-align: center;
+}
+
+.group.margin {
+  margin-bottom: 20px;
+}
+
+.col .imgholder {
+  height: 300px;
+  width: 100%;
+  background: #333;
+  transition: background 0.3s linear;
+}
+
+.col.bg {
+  background: #FFF;
+}
+
+.col.pointer {
+  cursor: pointer;
+}
+
+.col.bg:hover .imgholder {
+  background: #555;
+}
+
+.col span.feature {
+  font-size: 20px;
+}
+/*
+  Text
+*/
+
+.container > h1:not(.hero) {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container > h1:after {
+  content: "";
+  width: 30px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+h2 {
+  font-family: 'Roboto Slab', sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.left,
+.left > h1,
+.left > p {
+  text-align: left;
+}
+
+.reset {
+  text-align: left !important;
+}
+
+.reset:after {
+  display: none !important;
+}
+/* 
+  Slider with Content
+*/
+
+.white h1,
+.white h2,
+.white p,
+.white div,
+.white a {
+  color: #fff;
+}
+/*
+  Responsive
+*/
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .col.four {
+    width: 48%;
+    margin: 1%;
+    font-family: arial, 
+  }
+  .col.three {
+    display: block;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  .header {
+    height: auto;
+    background: #eee;
+  }
+  #logo {
+    position: initial;
+    float: none;
+    display: block;
+    transform: none;
+    margin: 10px auto 0 auto;
+  }
+  ul.nav {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  ul.nav li {
+    float: initial;
+    display: inline-block;
+  }
+  .responsivegroup {
+    display: block;
+  }
+  .responsivegroup:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media all and (max-width:450px) {
+  .col, .col.four, .col.three, .col.two {
+    display: block;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+  }
+  .col.extrapad {
+    padding: 1%;
+    margin-bottom: 10px;
+  }
+  .group {
+    display: none;
+  }
+}
+
+/*ALTELE*/
+.motto-en {
+font-size: 45px;
+font-weight: 400;
+color: #FFF;
+text-align: center;
+}
+
+.motto-ro {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center
+}
+
+.fundal1 {
+  background-image: url(http://data.nimages.fr/bgmottopnk.jpg);
+  
+  height: 400px;
+}
+
+.about-inf {
+    background: rgba(245, 245, 245, 0.88);
+    width: 300px;
+    height: 250px;
+    color: #000;
+    opacity: 0.65;
+    padding: 15px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+/*.fundal2 {
+    background: url(http://data.nimages.fr/fundal29rm.png);
+    height: auto;
+    background-position: 50% 34px;
+    color: #FFF;
+}
+
+.feedback {
+    position: relative;
+    background: #5c2688;
+    width: 100%;
+    height: auto;
+    opacity: 0.65;
+}
+.feedback2 {
+    position: relative;
+    left: 15%;
+    color: #FFF !important;
+    width: 800px;
+    height: auto;
+    opacity: 0.65;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}*/
+
+.link-util {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+.link-util {
+  transition: color 0.2s cubic-bezier(0.04, 0.32, 0.93,-0.04);
+  color: initial;
+  text-decoration: initial;
+}
+.link-util :hover {
+  color: #a846a8;
+}
+
+/* -------------------- SOCIAL LINK MEDIA ---------------- */
+
+as {
+  background: #D2D7D3;
+  color: #222;
+  display: inline-block;
+  text-align:c enter;
+  text-decoration: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+  padding-top: 12px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+as.icons:before {
+  font-family: 'FontAwesome', sans-serif;
+  color: #fff;
+  font-size: 20px;
+}
+as.facebook:before {
+content: '\f09a';
+}
+as.twitter:before {
+  content : '\f099';
+}
+as.github:before {
+    content : '\f113';
+}
+as.dribbble:before {
+    content : '\f17d';
+}
+as.pinterest:before {
+    content : '\f0d2';
+}
+as span {
+  background:#fff;
+  color:#222;
+  font-size:14px;
+  font-weight: bold;
+  position:absolute;
+  bottom:0;
+  left:-25px;
+  right:-25px;
+  padding:5px 7px;
+  visibility:hidden;
+  opacity:0;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+/* bottom arrow */
+as span:before {
+  content:'';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  left:40px;
+}
+as:hover span {
+  bottom:50px;
+  visibility:visible;
+  opacity:1;
+}
+/* colors */
+as.facebook:hover {
+  background-color: #4183D7;
+  color: #BFBFBF;
+}
+as.facebook span {
+  color:#4183D7;
+}
+as.twitter:hover {
+  background-color: #19B5FE;
+  color: #fff;
+}
+as.twitter span {
+  color:#19B5FE;
+}
+as.github:hover {
+  background-color: #000;
+  color: #fff;
+}
+as.github span {
+  color:#000;
+}
+as.dribbble:hover {
+  background-color: #F62459;
+  color: #fff;
+}
+as.dribbble span {
+  color:#F62459;
+}
+as.pinterest:hover {
+  background-color: #F22613;
+  color: #fff;
+}
+as.pinterest span {
+  color:#F22613;
+}
+
+
+/* -------------------- END SOCIL MEDIA LINK ------------- */
+
+
+/* ------------------ SLIDER FEED back ------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Kalam:700);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.sliderx {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  /*position: fixed;
+  top: 50%;
+  left: 50%;*/
+  width: 100%;
+    /*700px;*/
+  height: 300px;
+  margin-left: -350px;
+  margin-top: -150px;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: black;
+}
+.sliderx .slidex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 20px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 0;
+  cursor: pointer;
+}
+.sliderx .slidex h2 {
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+.sliderx .slidex.activex {
+  opacity: 1;
+}
+.sliderx .slidex:nth-child(1) {
+  background-color: #f79e7f;
+}
+.sliderx .slidex:nth-child(2) {
+  background-color: #53e3a6;
+}
+.sliderx .slidex:nth-child(3) {
+  background-color: #50a3a2;
+}
+.sliderx .slidex:nth-child(4) {
+  background-color: #887ff7;
+}
+.sliderx .slidex:nth-child(5) {
+  background-color: #e35353;
+}
+
+/* ---------------- END SLIDE FEED back ------------------- */
